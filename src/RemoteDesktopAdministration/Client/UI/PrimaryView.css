@@ -1,0 +1,62 @@
+#clientDashboard {
+    -fx-background-color: #000066;
+}
+
+#clientDashboard .label {
+    -fx-text-fill: #ffffff;
+}
+
+.button, #clientToggleSwitch, .split-menu-button {
+    -fx-cursor: hand;
+}
+
+.text-input, .text-input:focused {
+    -fx-prompt-text-fill: inherit;
+    /*derive(-fx-control-inner-background, -30%);*/
+}
+
+.message {
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+}
+
+.sentMessage {
+    -fx-background-color: dodgerblue;
+}
+
+.sentMessageContent {
+    -fx-fill: white;
+}
+
+.receivedMessage {
+    -fx-background-color: lightgray;
+}
+
+.receivedMessageContent {
+    -fx-fill: black;
+}
+
+/*.ownMessage {*/
+/*    -fx-control-inner-background: blue;*/
+/*    -fx-text-fill: white;*/
+/*}*/
+
+.list-cell .check-box {
+    -fx-focus-traversable: false;
+}
+
+#clientToggleSwitch {
+    -fx-focus-traversable: true;
+    -fx-border-radius: 30;
+}
+
+#clientToggleSwitch:hover, #clientToggleSwitch:focused {
+    -fx-opacity: 0.75;
+}
+
+#clientToggleSwitch:disabled {
+    -fx-opacity: 0.4;
+}
+
+.
+

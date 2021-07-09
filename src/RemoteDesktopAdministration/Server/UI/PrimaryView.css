@@ -1,0 +1,54 @@
+#serverHBox {
+    -fx-background-color: #000066;
+}
+
+#serverHBox .label {
+    -fx-text-fill: #ffffff;
+}
+
+.button, #serverToggleSwitch {
+    -fx-cursor: hand;
+}
+
+.text-input, .text-input:focused {
+    -fx-prompt-text-fill: inherit;
+}
+
+#serverToggleSwitch {
+    -fx-focus-traversable: true;
+    -fx-border-radius: 30;
+}
+
+#serverToggleSwitch:hover, #serverToggleSwitch:focused {
+    -fx-opacity: 0.75;
+}
+
+.list-cell .check-box {
+    -fx-focus-traversable: false;
+}
+
+#serverToggleSwitch:disabled {
+    -fx-opacity: 0.4;
+}
+
+.message {
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+}
+
+.sentMessage {
+    -fx-background-color: dodgerblue;
+}
+
+.sentMessageContent {
+    -fx-fill: white;
+}
+
+.receivedMessage {
+    -fx-background-color: lightgray;
+}
+
+.receivedMessageContent {
+    -fx-fill: black;
+}
+
