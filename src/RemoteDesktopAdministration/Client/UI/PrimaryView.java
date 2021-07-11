@@ -62,8 +62,7 @@ public class PrimaryView extends Application {
     private enum MessageCodes {
         START_OK(PrimaryView.TITLE + " Application started."),
         START_EXC(PrimaryView.TITLE + " Application failed to start."),
-        STOP_OK(PrimaryView.TITLE + " Application Stopped."),
-        STOP_EXC(TITLE + " Application failed to stop.");
+        STOP_OK(PrimaryView.TITLE + " Application Stopped.");
 
         private final String value;
 
