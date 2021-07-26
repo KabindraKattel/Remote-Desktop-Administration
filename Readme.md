@@ -29,38 +29,55 @@ Following commands are relative to this repository.
 
 1. Jar Package
 
-	```sh
-	 java -jar <parent-path>/artifacts/Jar/rda-client.jar   
-	```
-	  ```sh
-	 java -jar <parent-path>/artifacts/Jar/rda-server.jar   
-	```
+   ```sh
+    java -jar <parent-path>/artifacts/Jar/rda-client.jar   
+   ```
+     ```sh
+    java -jar <parent-path>/artifacts/Jar/rda-server.jar   
+   ```
 
-3. Linux (.deb) Package
-	
-	*Installation*
-	
-	```sh
-	 sudo apt-get install '<parent-path>/artifacts/Platform specific package/Linux (deb)/rda-client_1.0-1_amd64.deb'  
-	 ```
-	  ```sh
-	   sudo apt-get install '<parent-path>/artifacts/Platform specific package/Linux (deb)/rda-server_1.0-1_amd64.deb'  
-	 ```
+2. Linux (.deb) Package
 
-	*Removal*
+   *Installation*
 
-	```sh
-	 sudo apt-get remove rda-client  
-	```
-	```sh
-	 sudo apt-get remove rda-server  
-	```
+   ```sh
+    sudo apt-get install '<parent-path>/artifacts/Platform specific package/Linux (deb)/rda-client_1.0-1_amd64.deb'  
+    ```
+     ```sh
+      sudo apt-get install '<parent-path>/artifacts/Platform specific package/Linux (deb)/rda-server_1.0-1_amd64.deb'  
+    ```
+   > Note: *File Logger is present at location `~/.log`*
+   >
+   *Removal*
+
+   ```sh
+    sudo apt-get remove rda-client  
+   ```
+   ```sh
+    sudo apt-get remove rda-server  
+   ```
+   > Note: *File Logger is present at location `~/.log`*
+   >
+   > If File Logger is not deleted upon removal, delete manually.
+3. Windows (.exe) Package
+
+   *Installation and Removal*
+
+   > Double Click [rda-client-1.0.exe](artifacts/Platform%20specific%20package/Windows%20(exe)/rda-client-1.0.exe) for installing and removing Remote Desktop Administration Client
+
+   > Double Click [rda-server-1.0.exe](artifacts/Platform%20specific%20package/Windows%20(exe)/rda-server-1.0.exe) for installing and removing Remote Desktop Administration Server
+
+   Note: *After installation of related package, run as administrator to enable File Logger*
+   >
+   >Note: *File Logger is present at location `%ProgramFiles%\rda-client\.log` and/or `%ProgramFiles%\rda-server\.log`if default installation directory is not altered*
+   >
+   >If File Logger is not deleted upon removal, delete manually.
 
 ## Contributors
 
- - [Kabindra Kattel](https://github.com/KabindraKattel)
- - [Manoj Rokaya](https://github.com/manoj014)
- - [Sitaram Oli](https://github.com/Sitaramoli1122)
+- [Kabindra Kattel](https://github.com/KabindraKattel)
+- [Manoj Rokaya](https://github.com/manoj014)
+- [Sitaram Oli](https://github.com/Sitaramoli1122)
 
 
 
