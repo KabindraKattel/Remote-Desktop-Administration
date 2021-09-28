@@ -77,6 +77,7 @@ Following commands are relative to this repository.
 
 - [Kabindra Kattel](https://github.com/KabindraKattel)
 - [Manoj Rokaya](https://github.com/manoj014)
+- [Parag Pandit](https://github.com/Parag2054)
 - [Sitaram Oli](https://github.com/Sitaramoli1122)
 
 
