@@ -37,7 +37,7 @@ public class Chat {
 
     }
 
-    enum State {
+    public enum State {
         SEND, RECEIVE
     }
 

@@ -1,85 +1,102 @@
 # Remote-Desktop-Administration
+
 ![Logo](icons/logo.svg)
 
-Remote Desktop Administration is a JAVA based cross-platform client server stand-alone application with distributed message passing using JAVAFX where a central administrator acts as a server providing services to the connected clients within LAN / WLAN locations. 
+**Remote Desktop Administration** is a **Java-based**, cross-platform, standalone client-server application built with *
+*JavaFX**. It supports distributed message passing within LAN/WLAN environments, where a central administrator acts as
+the server and provides services to connected clients.
 
+---
 
 ## Features
 
- - Implementation of  Console Handler, File Handler, UI Event Handler for Log Recording.
- - Instant dual messaging service to allow communication between administrator and client(s).
- - Remote control access to administrator to remotely shutdown, restart, logoff client's computer(s).
- - Large file(s) or folder content(s) transfer remotely from administrator to client(s) computer masking the differences in file system architecture with SHA-256 Checksum verification in-between sent and received file.
- - Administrator full access to read client(s) desktop screen which is very much useful specially at the time of error detection and recovery.
- - Remote software installation at  client(s) end at a time which is very useful for software version control and update.
- 
+- Console Handler, File Handler, and UI Event Handler for comprehensive log recording.
+- Instant dual-messaging service enabling real-time communication between the administrator and client(s).
+- Remote administrative control to shut down, restart, or log off client computers.
+- Remote transfer of large files or folder contents from the administrator to client machines, with SHA-256 checksum
+  verification for data integrity across different file system architectures.
+- Real-time desktop screen access for administrators, useful during error detection and recovery.
+- Remote software installation on client systems, supporting efficient version control and updates.
+
+---
 
 ## External Libraries Used
 
-Hashids, a [small open-source library](https://github.com/jiecao-fm/hashids-java) that generates short, unique, non-sequential ids from numbers, is used to create UIDs for each connected client.
+- [**Hashids**](https://github.com/jiecao-fm/hashids-java): A lightweight, open-source library that generates short,
+  unique, non-sequential IDs from numbers. It is used to create UIDs for each connected client.
 
+---
 
 ## Installation / Removal
 
-Remote Desktop Administration (RDA) has independent packages for client and server. The project was created using [Liberica JDK 16.0.1](https://bell-sw.com/).
+Remote Desktop Administration (RDA) has independent packages for both the **client** and **server**. The project was
+developed using [**Liberica JDK 16.0.1**](https://bell-sw.com/), which includes JavaFX by default.
 
-> I recommend Liberica JDK as JavaFX is pre-bundled inside it.
+> ⚠️ **Recommended**: Use Liberica JDK as it comes bundled with JavaFX.
 
-Following commands are relative to this repository.
+### 1. JAR Packages
 
-1. Jar Package
+```sh
+  java -jar <parent-path>/artifacts/Jar/rda-client.jar
+```
 
-   ```sh
-    java -jar <parent-path>/artifacts/Jar/rda-client.jar   
-   ```
-     ```sh
-    java -jar <parent-path>/artifacts/Jar/rda-server.jar   
-   ```
+```sh
+  java -jar <parent-path>/artifacts/Jar/rda-server.jar
+```
 
-2. Linux (.deb) Package
+---
 
-   *Installation*
+### 2. Linux (.deb) Packages
 
-   ```sh
-    sudo apt-get install '<parent-path>/artifacts/Platform specific package/Linux (deb)/rda-client_1.0-1_amd64.deb'  
-    ```
-     ```sh
-      sudo apt-get install '<parent-path>/artifacts/Platform specific package/Linux (deb)/rda-server_1.0-1_amd64.deb'  
-    ```
-   > Note: *File Logger is present at location `~/.log`*
-   >
-   *Removal*
+#### Installation
 
-   ```sh
-    sudo apt-get remove rda-client  
-   ```
-   ```sh
-    sudo apt-get remove rda-server  
-   ```
-   > Note: *File Logger is present at location `~/.log`*
-   >
-   > If File Logger is not deleted upon removal, delete manually.
-3. Windows (.exe) Package
+```sh
+  sudo apt-get install '<parent-path>/artifacts/Platform specific package/Linux (deb)/rda-client_1.0-1_amd64.deb'
+```
 
-   *Installation and Removal*
+```sh
+  sudo apt-get install '<parent-path>/artifacts/Platform specific package/Linux (deb)/rda-server_1.0-1_amd64.deb'
+```
 
-   > Double Click [rda-client-1.0.exe](artifacts/Platform%20specific%20package/Windows%20(exe)/rda-client-1.0.exe) for installing and removing Remote Desktop Administration Client
+> 📂 **Log Location**: `~/.log`
 
-   > Double Click [rda-server-1.0.exe](artifacts/Platform%20specific%20package/Windows%20(exe)/rda-server-1.0.exe) for installing and removing Remote Desktop Administration Server
+#### Removal
 
-   Note: *After installation of related package, run as administrator to enable File Logger*
-   >
-   >Note: *File Logger is present at location `%ProgramFiles%\rda-client\.log` and/or `%ProgramFiles%\rda-server\.log`if default installation directory is not altered*
-   >
-   >If File Logger is not deleted upon removal, delete manually.
+```sh
+  sudo apt-get remove rda-client
+```
+
+```sh
+  sudo apt-get remove rda-server
+```
+
+> ⚠️ If the log file is not deleted automatically, remove it manually from `~/.log`.
+
+---
+
+### 3. Windows (.exe) Packages
+
+#### Installation & Removal
+
+- Double-click [rda-client-1.0.exe](artifacts/Platform%20specific%20package/Windows%20(exe)/rda-client-1.0.exe) to
+  install/uninstall the **client**.
+- Double-click [rda-server-1.0.exe](artifacts/Platform%20specific%20package/Windows%20(exe)/rda-server-1.0.exe) to
+  install/uninstall the **server**.
+
+> ⚠️ **Run as Administrator** after installation to enable File Logger.
+
+> 📂 **Log Location**:
+> - `%ProgramFiles%\rda-client\.log`
+> - `%ProgramFiles%\rda-server\.log`  
+    > *(if the default installation directory is used)*
+
+> ⚠️ If the log file is not deleted automatically, remove it manually.
+
+---
 
 ## Contributors
 
 - [Kabindra Kattel](https://github.com/KabindraKattel)
 - [Manoj Rokaya](https://github.com/manoj014)
 - [Parag Pandit](https://github.com/Parag2054)
-- [Sitaram Oli](https://github.com/Sitaramoli1122)
-
-
-
-
+- [Sitaram Oli](https://github.com/sitaramoli)

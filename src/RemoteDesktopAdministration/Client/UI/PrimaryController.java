@@ -193,7 +193,7 @@ public class PrimaryController implements Initializable {
 
     private void informationAlertOnChanged() {
         primaryModel.informationAlertProperty().addListener((obs, oldMsg, newMsg) -> {
-            if (!newMsg.equals("")) {
+            if (!newMsg.isEmpty()) {
                 primaryModel.setInformationAlert("");
                 showInformationAlert(Modality.WINDOW_MODAL, "Shutdown Option Alert", "Information", newMsg, 30);
             }
@@ -215,7 +215,7 @@ public class PrimaryController implements Initializable {
     private void configureIntegerSpinner(Spinner<Integer> integerSpinner) {
         integerSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(PrimaryController.MIN, PrimaryController.MAX, PrimaryController.DEFAULT));
         integerSpinner.getEditor().textProperty().addListener((observable, oldTxt, newTxt) -> {
-            if (newTxt.equals(""))
+            if (newTxt.isEmpty())
                 integerSpinner.getEditor().setText(PrimaryController.DEFAULT + "");
             if (!newTxt.matches("\\d*")) {
                 var txt = newTxt.replaceAll("[^\\d]", "");
@@ -361,7 +361,7 @@ public class PrimaryController implements Initializable {
     private void clientIDOnChanged() {
         primaryModel.clientIdProperty().addListener((observableValue, oldID, newID) -> {
             idLabel.setText(newID);
-            if (!newID.equals(""))
+            if (!newID.isEmpty())
                 ClientLogger.CLIENT_LOGGER.info("Client Unique Id : " + newID);
         });
     }

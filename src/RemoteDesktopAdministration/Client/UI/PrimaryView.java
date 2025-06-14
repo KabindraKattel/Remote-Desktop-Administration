@@ -71,7 +71,7 @@ public class PrimaryView extends Application {
         }
 
         String getFormattedMessage(Throwable exc) {
-            return (exc == null) ? (name() + " | " + value) : (name() + " | " + value + " [ " + exc + " ]");
+            return (exc == null) ? ("   " + name() + "  : :  " + value) : (name() + "  : :  " + value + " [ " + exc + " ]");
         }
     }
 

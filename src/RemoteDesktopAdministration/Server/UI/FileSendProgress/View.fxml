@@ -8,27 +8,25 @@
             maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefWidth="475.0"
             xmlns="http://javafx.com/javafx/11.0.1">
     <header>
-        <HBox spacing="10.0" style="-fx-background-color: #000066;">
-            <children>
-                <Label fx:id="remTime" style="-fx-text-fill: white;" text="Unknown Time">
-                    <font>
-                        <Font size="20.0"/>
-                    </font>
-                </Label>
-                <Label fx:id="remSize" style="-fx-text-fill: white;" text="[Unknown size]">
-                    <font>
-                        <Font size="20.0"/>
-                    </font>
-                </Label>
-                <Label style="-fx-text-fill: white;" text="remaining">
-                    <font>
-                        <Font size="20.0"/>
-                    </font>
-                </Label>
-            </children>
+        <HBox spacing="10.0" style="-fx-background-color: #2D54A9FF;">
             <padding>
                 <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
             </padding>
+            <Label fx:id="remTime" style="-fx-text-fill: white;" text="Unknown Time">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+            </Label>
+            <Label fx:id="remSize" style="-fx-text-fill: white;" text="[Unknown size]">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+            </Label>
+            <Label style="-fx-text-fill: white;" text="remaining">
+                <font>
+                    <Font size="20.0"/>
+                </font>
+            </Label>
         </HBox>
     </header>
     <content>
@@ -51,21 +49,19 @@
                 <RowConstraints vgrow="SOMETIMES"/>
                 <RowConstraints vgrow="SOMETIMES"/>
             </rowConstraints>
-            <children>
-                <Label text="Total Size" GridPane.rowIndex="1"/>
-                <Label fx:id="totalSize" text="Unknown size" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-                <Label text="Current File"/>
-                <Label fx:id="currentFile" text="Folder/file" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="1"/>
-                <Label text="Uploaded" GridPane.rowIndex="2"/>
-                <Label fx:id="uploaded" text="Unknown size" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="1"
-                       GridPane.rowIndex="2"/>
-                <Label text="Rate" GridPane.rowIndex="3"/>
-                <Label fx:id="speed" text="Unknown size / sec" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="1"
-                       GridPane.rowIndex="3"/>
-            </children>
             <padding>
                 <Insets bottom="10.0" left="20.0" right="20.0" top="10.0"/>
             </padding>
+            <Label text="Total Size" GridPane.rowIndex="1"/>
+            <Label fx:id="totalSize" text="Unknown size" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <Label text="Current File"/>
+            <Label fx:id="currentFile" text="Folder/file" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="1"/>
+            <Label text="Uploaded" GridPane.rowIndex="2"/>
+            <Label fx:id="uploaded" text="Unknown size" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="1"
+                   GridPane.rowIndex="2"/>
+            <Label text="Rate" GridPane.rowIndex="3"/>
+            <Label fx:id="speed" text="Unknown size / sec" textOverrun="CENTER_ELLIPSIS" GridPane.columnIndex="1"
+                   GridPane.rowIndex="3"/>
         </GridPane>
     </expandableContent>
 </DialogPane>

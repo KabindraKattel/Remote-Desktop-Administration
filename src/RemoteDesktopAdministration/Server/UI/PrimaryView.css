@@ -1,8 +1,21 @@
 #serverHBox {
-    -fx-background-color: #000066;
+    -fx-background-color: #2D54A9FF;
 }
 
 #serverHBox .label {
+    -fx-text-fill: #ffffff;
+}
+
+.text-area {
+    -fx-border-radius: 0;
+}
+
+.text-field {
+    -fx-border-color: #2D54A9FF;
+}
+
+.button {
+    -fx-background-color: #2D54A9FF;
     -fx-text-fill: #ffffff;
 }
 

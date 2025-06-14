@@ -8,7 +8,7 @@
             maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefWidth="475.0"
             xmlns="http://javafx.com/javafx/11.0.1">
     <header>
-        <HBox spacing="10.0" style="-fx-background-color: #000066;">
+        <HBox spacing="10.0" style="-fx-background-color: #2D54A9FF;">
             <padding>
                 <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
             </padding>

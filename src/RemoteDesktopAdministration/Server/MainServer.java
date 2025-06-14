@@ -34,7 +34,7 @@ public class MainServer {
     private long clientId = 0L;
 
     /**
-     * @param uiMainModel Model class which is a common class to Front-end and Back-end. Back-end sets Property values of Model class. Front-end listen to such property and acts upon changes.
+     * @param uiMainModel Model class which is a common class to Front-end and Back-end. Back-end sets Property values of Model class. Front-end listens to such property and acts upon changes.
      */
     public MainServer(PrimaryModel uiMainModel) {
         this.uiMainModel = uiMainModel;
@@ -256,7 +256,7 @@ public class MainServer {
             client.addFTPChannelInnerContents(innerContentsCollection);
             if (!client.isFTPScheduled())
                 writeStream(FTP_OFF_START, new byte[]{1}, client.getDataOutputStream());
-            if (innerContentsCollection.size() != 0)
+            if (!innerContentsCollection.isEmpty())
                 ServerLogger.SERVER_LOGGER.info("Selected files are added to send-queue.");
         }));
     }
@@ -310,7 +310,7 @@ public class MainServer {
         }
 
         public ListInnerContents.InnerContents getFTPChannelFirstInnerContentsAndRemove() {
-            if (innerContentsList.size() == 0) {
+            if (innerContentsList.isEmpty()) {
                 return null;
             }
             return innerContentsList.remove(0);

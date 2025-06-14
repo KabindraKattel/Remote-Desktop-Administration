@@ -1,192 +1,213 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
 
-<GridPane hgap="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="690.0" minWidth="775.0" prefHeight="690.0" prefWidth="775.0" vgap="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RemoteDesktopAdministration.Client.UI.PrimaryController">
+<GridPane hgap="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="690.0" minWidth="775.0" prefHeight="690.0"
+          prefWidth="775.0" vgap="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="RemoteDesktopAdministration.Client.UI.PrimaryController">
     <columnConstraints>
-        <ColumnConstraints hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" percentWidth="60" />
-        <ColumnConstraints hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" percentWidth="40" />
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" percentWidth="60"/>
+        <ColumnConstraints hgrow="ALWAYS" maxWidth="-Infinity" minWidth="-Infinity" percentWidth="40"/>
     </columnConstraints>
     <rowConstraints>
-        <RowConstraints vgrow="NEVER" />
-        <RowConstraints vgrow="ALWAYS" />
-        <RowConstraints vgrow="NEVER" />
-        <RowConstraints vgrow="ALWAYS" />
+        <RowConstraints vgrow="NEVER"/>
+        <RowConstraints vgrow="ALWAYS"/>
+        <RowConstraints vgrow="NEVER"/>
+        <RowConstraints vgrow="ALWAYS"/>
     </rowConstraints>
-    <children>
-        <HBox id="clientDashboard" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="48.0" prefWidth="775.0" spacing="10.0" GridPane.columnSpan="2">
-            <children>
-                <Label fx:id="nameLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="199.0" textOverrun="CENTER_ELLIPSIS" HBox.hgrow="ALWAYS">
-                    <effect>
-                        <Blend />
-                    </effect>
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                    <HBox.margin>
-                        <Insets right="10.0" />
-                    </HBox.margin>
-                </Label>
-                <Label fx:id="idLabel" alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="31.0" prefWidth="104.0" textOverrun="CENTER_ELLIPSIS" wrapText="true" HBox.hgrow="ALWAYS">
-                    <effect>
-                        <Blend />
-                    </effect>
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                    <HBox.margin>
-                        <Insets />
-                    </HBox.margin>
-                </Label>
-                <TextField fx:id="ipInput" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="138.0" promptText="Server IP Address" HBox.hgrow="ALWAYS" />
-                <HBox minHeight="30.0" prefHeight="30.0" prefWidth="153.0">
-                    <Spinner fx:id="portInput" editable="true" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="128.0" promptText="Server Port" />
-                    <Button fx:id="defaultPortBtn" layoutX="71.0" layoutY="3.0" maxHeight="1.7976931348623157E308" mnemonicParsing="false" text="D" />
-                </HBox>
-                <StackPane id="clientToggleSwitch" fx:id="clientToggleSwitch" alignment="CENTER_LEFT" focusTraversable="true" prefHeight="34.0" prefWidth="58.0" HBox.hgrow="NEVER">
-                    <children>
-                        <Rectangle arcHeight="30.0" arcWidth="30.0" fill="RED" height="30.0" stroke="RED" strokeLineCap="ROUND" strokeLineJoin="BEVEL" width="60.0">
-                            <effect>
-                                <DropShadow />
-                            </effect>
-                            <cursor>
-                                <Cursor fx:constant="HAND" />
-                            </cursor>
-                        </Rectangle>
-                        <Circle fill="WHITE" radius="15.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND">
-                            <effect>
-                                <DropShadow />
-                            </effect>
-                        </Circle>
-                    </children>
-                    <HBox.margin>
-                        <Insets left="10.0" />
-                    </HBox.margin>
-                </StackPane>
-            </children>
-            <padding>
-                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-            </padding>
-            <GridPane.margin>
-                <Insets left="-20.0" right="-20.0" />
-            </GridPane.margin>
-        </HBox>
-        <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="317.0" minWidth="429.0" prefHeight="317.0" prefWidth="429.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
-            <children>
-                <Label alignment="TOP_LEFT" disable="true" maxWidth="1.7976931348623157E308" prefHeight="19.0" prefWidth="417.0" text="Chat Service" VBox.vgrow="NEVER">
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                </Label>
-                <ScrollPane fx:id="chatScrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="272.0" minWidth="429.0" prefHeight="272.0" prefWidth="429.0" VBox.vgrow="ALWAYS">
-                    <content>
-                        <GridPane fx:id="chatGridPane" style="-fx-background-color: WHITE;" vgap="10.0">
-                            <padding>
-                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                            </padding>
-                            <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" percentWidth="25.0" />
-                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" percentWidth="50.0" />
-                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" percentWidth="25.0" />
-                            </columnConstraints>
-                        </GridPane>
-                    </content>
-                </ScrollPane>
-                <HBox prefHeight="18.0" prefWidth="460.0" VBox.vgrow="NEVER">
-                    <children>
-                        <TextArea fx:id="messageInput" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="25.0" minWidth="370.0" prefHeight="25.0" prefWidth="370.0" promptText="Enter message " HBox.hgrow="ALWAYS">
-                            <HBox.margin>
-                                <Insets />
-                            </HBox.margin>
-                        </TextArea>
-                        <Button fx:id="sendBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Send" />
-                    </children>
-                    <VBox.margin>
-                        <Insets />
-                    </VBox.margin>
-                </HBox>
-            </children>
-        </VBox>
-        <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="316.0" minWidth="288.0" prefHeight="316.0" prefWidth="288.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
-            <children>
-                <Label alignment="TOP_RIGHT" disable="true" maxWidth="1.7976931348623157E308" prefHeight="20.0" prefWidth="275.0" text="Files Receive History" VBox.vgrow="NEVER">
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                </Label>
-                <ListView fx:id="fileSharedList" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="280.0" prefWidth="288.0" VBox.vgrow="ALWAYS">
-                    <placeholder>
-                        <Label disable="true" text="No files received">
-                            <font>
-                                <Font size="14.0" />
-                            </font>
-                        </Label>
-                    </placeholder>
-                </ListView>
-            </children>
-        </VBox>
-        <VBox alignment="CENTER" layoutY="395.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="111.0" prefWidth="775.0" GridPane.columnSpan="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2">
-            <children>
-                <Label disable="true" maxWidth="1.7976931348623157E308" text="Current File Download Location">
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                </Label>
-                <HBox prefWidth="200.0">
-                    <children>
-                        <TextField fx:id="downLocationField" disable="true" editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Download Location Not Set" HBox.hgrow="ALWAYS" />
-                        <Button fx:id="changeDownLocation" mnemonicParsing="false" text="Change">
-                            <font>
-                                <Font size="14.0" />
-                            </font>
-                        </Button>
-                    </children>
-                </HBox>
-            </children>
-        </VBox>
-        <VBox alignment="TOP_CENTER" layoutX="1.0" layoutY="485.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="187.0" prefWidth="775.0" GridPane.columnSpan="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
-            <children>
-                <Label disable="true" maxWidth="1.7976931348623157E308" text="Events" VBox.vgrow="NEVER">
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                </Label>
-                <ScrollPane fx:id="eventScrollPane" fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
-                    <content>
-                        <TextFlow fx:id="eventFlow" lineSpacing="2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: white;" textAlignment="JUSTIFY">
-                            <padding>
-                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                            </padding>
-                            <effect>
-                                <DropShadow blurType="ONE_PASS_BOX" height="2.0" radius="0.5" width="2.0">
-                                    <color>
-                                        <Color red="1.0" green="1.0" blue="1.0" />
-                                    </color>
-                                </DropShadow>
-                            </effect>
-                        </TextFlow>
-                    </content>
-                    <opaqueInsets>
-                        <Insets />
-                    </opaqueInsets>
-                    <VBox.margin>
-                        <Insets />
-                    </VBox.margin>
-                </ScrollPane>
-            </children>
-            <GridPane.margin>
-                <Insets />
-            </GridPane.margin>
-        </VBox>
-    </children>
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" />
+        <Insets bottom="20.0" left="20.0" right="20.0"/>
     </padding>
+    <HBox id="clientDashboard" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+          prefHeight="48.0" prefWidth="775.0" spacing="10.0" stylesheets="@PrimaryView.css" GridPane.columnSpan="2">
+        <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0"/>
+        </padding>
+        <GridPane.margin>
+            <Insets left="-20.0" right="-20.0"/>
+        </GridPane.margin>
+        <Label fx:id="nameLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+               minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="313.0" textFill="WHITE"
+               textOverrun="CENTER_ELLIPSIS" HBox.hgrow="ALWAYS">
+            <effect>
+                <Blend/>
+            </effect>
+            <font>
+                <Font name="System Bold" size="22.0"/>
+            </font>
+            <HBox.margin>
+                <Insets right="10.0"/>
+            </HBox.margin>
+        </Label>
+        <TextField fx:id="ipInput" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minWidth="-Infinity"
+                   prefHeight="31.0" prefWidth="138.0" promptText="Server IP Address" HBox.hgrow="ALWAYS"/>
+        <HBox minHeight="30.0" prefHeight="30.0" prefWidth="153.0" style="-fx-background-color: #ff0000;">
+            <Spinner fx:id="portInput" editable="true" maxHeight="1.7976931348623157E308" maxWidth="-Infinity"
+                     minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="138.0"
+                     promptText="Server Port" styleClass="portInput" stylesheets="@PrimaryView.css">
+                <opaqueInsets>
+                    <Insets/>
+                </opaqueInsets>
+            </Spinner>
+        </HBox>
+        <Button fx:id="defaultPortBtn" maxHeight="1.7976931348623157E308" mnemonicParsing="false"
+                style="-fx-background-color: #ffffff;" text="D"/>
+        <StackPane id="clientToggleSwitch" fx:id="clientToggleSwitch" alignment="CENTER_LEFT"
+                   focusTraversable="true" prefHeight="34.0" prefWidth="58.0" HBox.hgrow="NEVER">
+            <children>
+                <Rectangle arcHeight="30.0" arcWidth="30.0" fill="RED" height="30.0" stroke="RED"
+                           strokeLineCap="ROUND" strokeLineJoin="BEVEL" width="60.0">
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Rectangle>
+                <Circle fill="WHITE" radius="15.0" stroke="WHITE" strokeLineCap="ROUND" strokeLineJoin="ROUND">
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                </Circle>
+            </children>
+            <HBox.margin>
+                <Insets left="10.0"/>
+            </HBox.margin>
+        </StackPane>
+    </HBox>
+    <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="317.0" minWidth="429.0"
+          prefHeight="317.0" prefWidth="429.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+        <Label alignment="TOP_LEFT" disable="true" maxWidth="1.7976931348623157E308" prefHeight="19.0"
+               prefWidth="417.0" text="Chat Service" VBox.vgrow="NEVER">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <ScrollPane fx:id="chatScrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER"
+                    maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="272.0"
+                    minWidth="429.0" prefHeight="272.0" prefWidth="429.0" VBox.vgrow="ALWAYS">
+            <GridPane fx:id="chatGridPane" styleClass="chat-container" stylesheets="@PrimaryView.css"
+                      vgap="100.0">
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                </padding>
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity"
+                                       percentWidth="25.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" percentWidth="50.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" percentWidth="25.0"/>
+                </columnConstraints>
+            </GridPane>
+        </ScrollPane>
+        <HBox prefHeight="18.0" prefWidth="460.0" VBox.vgrow="NEVER">
+            <VBox.margin>
+                <Insets/>
+            </VBox.margin>
+            <TextArea fx:id="messageInput" maxHeight="-Infinity" maxWidth="1.7976931348623157E308"
+                      minHeight="25.0" minWidth="370.0" prefHeight="25.0" prefWidth="370.0"
+                      promptText="Enter message " HBox.hgrow="ALWAYS">
+                <HBox.margin>
+                    <Insets/>
+                </HBox.margin>
+            </TextArea>
+            <Button fx:id="sendBtn" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0"
+                    stylesheets="@PrimaryView.css" text="Send" textFill="WHITE"/>
+        </HBox>
+    </VBox>
+    <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+          minHeight="316.0" minWidth="288.0" prefHeight="316.0" prefWidth="288.0" GridPane.columnIndex="1"
+          GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+        <Label alignment="TOP_RIGHT" disable="true" maxWidth="1.7976931348623157E308" prefHeight="20.0"
+               prefWidth="275.0" text="Files Receive History" VBox.vgrow="NEVER">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <ListView fx:id="fileSharedList" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                  prefHeight="280.0" prefWidth="288.0" VBox.vgrow="ALWAYS">
+            <placeholder>
+                <Label disable="true" text="No files received">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Label>
+            </placeholder>
+        </ListView>
+    </VBox>
+    <VBox alignment="CENTER" layoutY="395.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+          prefHeight="111.0" prefWidth="775.0" GridPane.columnSpan="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2">
+        <Label disable="true" maxWidth="1.7976931348623157E308" text="Current File Download Location">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <HBox prefWidth="200.0">
+            <TextField fx:id="downLocationField" disable="true" editable="false"
+                       maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                       promptText="Download Location Not Set" stylesheets="@PrimaryView.css"
+                       HBox.hgrow="ALWAYS"/>
+            <Button fx:id="changeDownLocation" mnemonicParsing="false" stylesheets="@PrimaryView.css"
+                    text="Change" textFill="WHITE">
+                <font>
+                    <Font size="14.0"/>
+                </font>
+            </Button>
+        </HBox>
+    </VBox>
+    <VBox alignment="TOP_CENTER" layoutX="1.0" layoutY="485.0" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308" prefHeight="187.0" prefWidth="775.0" GridPane.columnSpan="2"
+          GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+        <GridPane.margin>
+            <Insets/>
+        </GridPane.margin>
+        <Label disable="true" maxWidth="1.7976931348623157E308" text="Events" VBox.vgrow="NEVER">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <ScrollPane fx:id="eventScrollPane" fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308"
+                    maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+            <VBox.margin>
+                <Insets/>
+            </VBox.margin>
+            <TextFlow fx:id="eventFlow" lineSpacing="2.0" maxHeight="1.7976931348623157E308"
+                      maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity"
+                      style="-fx-background-color: white;" textAlignment="JUSTIFY">
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                </padding>
+                <effect>
+                    <DropShadow blurType="ONE_PASS_BOX" height="2.0" radius="0.5" width="2.0">
+                        <color>
+                            <Color red="1.0" green="1.0" blue="1.0"/>
+                        </color>
+                    </DropShadow>
+                </effect>
+            </TextFlow>
+        </ScrollPane>
+    </VBox>
 </GridPane>

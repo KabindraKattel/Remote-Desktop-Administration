@@ -34,7 +34,7 @@ public class MainClient {
     private DataOutputStream dataOutputStream = null;
 
     /**
-     * @param primaryModel Model class which is a common class to Front-end and Back-end. Back-end sets Property values of Model class. Front-end listen to such property and acts upon changes.
+     * @param primaryModel Model class which is a common class to Front-end and Back-end. Back-end sets Property values of Model class. Front-end listens to such property and acts upon changes.
      */
     public MainClient(PrimaryModel primaryModel) {
 
@@ -84,7 +84,7 @@ public class MainClient {
     public void listenServer() {
 
         /*
-         * do -while loop ends only when client socket endpoint at server side is closed....
+         * do-while loop ends only when client socket endpoint at server side is closed...
          * after then if any Client Operations are active, they are aborted ...
          */
         writeStream(DescriptorCode.CLIENT_ONLINE, getClientName() + "\n" + System.getProperty("os.name"));
@@ -265,7 +265,7 @@ public class MainClient {
 
     private void connectionLost() {
 
-        if (!socket.isClosed()) {//if client has closed client socket but server side client socket is still on..
+        if (!socket.isClosed()) {//if client has closed client socket but server side client socket is still on.
             primaryModel.connectionLost();
         }
 
